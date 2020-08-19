@@ -45,6 +45,7 @@ function Profile(props) {
         }
       }
       var ctx = document.getElementById("myChart");
+      // eslint-disable-next-line
       var myChart = new Chart(ctx, {
         type: "doughnut",
         data: {
