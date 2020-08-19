@@ -6,8 +6,8 @@ function Profile(props) {
   const [data, setData] = useState([]);
   const [date, setDate] = useState("");
   const [rate, setRate] = useState("");
-  const [repos, setRepos] = useState([]);
-  const [num, setNum] = useState(6);
+  // const [repos, setRepos] = useState([]);
+  // const [num, setNum] = useState(6);
   // random colors
   function randomColor() {
     let r = Math.floor(Math.random() * 255);
@@ -99,20 +99,20 @@ function Profile(props) {
     // })
     // .catch(err => console.log(err))
   }, [input]);
-  function loadMore() {
-    setNum((num) => num + 6);
-    console.log(repos);
-    console.log(num);
-  }
-  useEffect(() => {
-    fetch(`https://api.github.com/users/${input}/repos?per_page=${num}`)
-      .then((res) => res.json())
-      .then((res) => {
-        setRepos(res);
-        console.log(res);
-      })
-      .catch((err) => console.log(err));
-  }, [num, input]);
+  // function loadMore() {
+  //   setNum((num) => num + 6);
+  //   console.log(repos);
+  //   console.log(num);
+  // }
+  // useEffect(() => {
+  //   fetch(`https://api.github.com/users/${input}/repos?per_page=${num}`)
+  //     .then((res) => res.json())
+  //     .then((res) => {
+  //       setRepos(res);
+  //       console.log(res);
+  //     })
+  //     .catch((err) => console.log(err));
+  // }, [num, input]);
 
   return (
     <div className="profile">
